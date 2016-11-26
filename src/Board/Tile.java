@@ -9,8 +9,8 @@ public class Tile {
         7, Boar
         8, Den
         */
-        boolean hasCrocodile;
-        boolean hasTiger;
+        int hasCrocodile;
+        int hasTiger;
         int tigerSection; //-1 if no tiger
         int middleFeature;
         int rotation;
@@ -23,8 +23,8 @@ public class Tile {
 		this.b=new Edge(b);
                 rotation = 0;
                 middleFeature = m;
-                hasCrocodile = false;
-                hasTiger = false;
+                hasCrocodile = 0;
+                hasTiger = 0;
                 tigerSection = -1;
                 
 	}
@@ -50,11 +50,11 @@ public class Tile {
         }
         
         public void placeTiger(int section) {
-            hasTiger = true;
+            hasTiger++;
             tigerSection = section;
         }
         
         public void placeCroc(){
-            hasCrocodile = true;
+            hasCrocodile++;
         }
 }   
