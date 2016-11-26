@@ -10,7 +10,7 @@ public class Tile {
         8, Den
         */
         boolean hasCrocodile;
-        boolean hasTiger;
+        int numOfTigers;
         int tigerSection; //-1 if no tiger
         int middleFeature;
         int rotation;
@@ -24,7 +24,7 @@ public class Tile {
                 rotation = 0;
                 middleFeature = m;
                 hasCrocodile = false;
-                hasTiger = false;
+                numOfTigers = 0;
                 tigerSection = -1;
                 
 	}
@@ -50,7 +50,7 @@ public class Tile {
         }
         
         public void placeTiger(int section) {
-            hasTiger = true;
+            numOfTigers++;
             tigerSection = section;
         }
         
