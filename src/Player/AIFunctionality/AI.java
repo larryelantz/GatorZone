@@ -6,7 +6,21 @@ import Board.*;
 
 
 public class AI extends Player {
+	public BoardSpace makeNextMove(Tile[] tiles, Coordinates coor, BoardSpace[] validSpaces) {
+		int numMoves = tiles.length;
+		if (tiles.isEmpty()) {
+			if (tigers > 0) {
+				// check finished lakes for 1 opponent meeple and 1 owned meeple
+				// place a meeple
+			}
+			else
+				//pass
+		} else if (numMoves == 1) {
+			// return single move
+		} else {// numMoves is numerous and must be chosen carefully
 
+		}
+	}
 	/*
 	 * Ideas:
 	 * 
